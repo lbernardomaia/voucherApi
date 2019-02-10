@@ -25,8 +25,8 @@ public class SearchByClientServiceImpl implements SearchByClientService {
     @Value("${client.endpoint}")
     private String endpoint;
 
-    @Value("${pathVariable.businessId}")
-    private String branchId;
+    @Value("${businessId}")
+    private String businessId;
 
     private RestTemplate restTemplate;
 
@@ -77,7 +77,7 @@ public class SearchByClientServiceImpl implements SearchByClientService {
     }
 
     private UriComponentsBuilder getUriComponentsBuilder(Client client, long currentPage) {
-        UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromHttpUrl(uri).pathSegment(branchId, endpoint);
+        UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromHttpUrl(uri).pathSegment(businessId, endpoint);
 
         searchByClientQueryParameter.getQueryParams(client).ifPresent(uriComponentsBuilder::queryParams);
 

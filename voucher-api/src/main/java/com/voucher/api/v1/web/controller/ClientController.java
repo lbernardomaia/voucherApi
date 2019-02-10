@@ -1,8 +1,8 @@
 package com.voucher.api.v1.web.controller;
 
 import com.voucher.api.v1.core.service.ClientService;
-import com.voucher.api.v1.core.dto.ClientDto;
-import com.voucher.api.v1.core.dto.SearchClientDto;
+import com.voucher.api.v1.core.dto.client.ClientDto;
+import com.voucher.api.v1.core.dto.client.SearchClientDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

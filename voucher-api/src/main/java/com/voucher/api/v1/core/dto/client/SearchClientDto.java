@@ -1,4 +1,4 @@
-package com.voucher.api.v1.core.dto;
+package com.voucher.api.v1.core.dto.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

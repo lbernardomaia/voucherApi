@@ -17,8 +17,8 @@ public class GetClientByIdServiceImpl implements GetClientByIdService {
     @Value("${client.endpoint}")
     private String endpoint;
 
-    @Value("${pathVariable.businessId}")
-    private String branchId;
+    @Value("${businessId}")
+    private String businessId;
 
     private RestTemplate restTemplate;
 
@@ -29,7 +29,7 @@ public class GetClientByIdServiceImpl implements GetClientByIdService {
 
     @Override
     public Client search(String clientId){
-        String clientIdEndpoint = UriComponentsBuilder.fromHttpUrl(uri).pathSegment(branchId, endpoint, clientId).toUriString();
+        String clientIdEndpoint = UriComponentsBuilder.fromHttpUrl(uri).pathSegment(businessId, endpoint, clientId).toUriString();
 
         return restTemplate.exchange(clientIdEndpoint, HttpMethod.GET,null, Client.class).getBody();
     }

@@ -1,22 +1,36 @@
 package com.voucher.api.v1.web.controller;
 
+import com.voucher.api.v1.core.dto.voucher.CreateVoucherDto;
+import com.voucher.api.v1.core.dto.voucher.SearchVoucherDto;
+import com.voucher.api.v1.core.dto.voucher.VoucherDto;
+import com.voucher.api.v1.core.service.VoucherService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
 public class VoucherController {
 
     private static Logger LOG = LoggerFactory.getLogger(VoucherController.class);
+    private VoucherService voucherService;
 
-    @GetMapping("/voucher")
-    public List<String> getVoucher(){
-        LOG.info("Voucher api");
-        return Arrays.asList("L1234","L78765","L45634");
+    @Autowired
+    public VoucherController(VoucherService voucherService) {
+        this.voucherService = voucherService;
     }
 
+    @GetMapping("/v1/voucher")
+    public List<VoucherDto> searchVoucher(SearchVoucherDto searchVoucherDto){
+        LOG.info("Search Voucher {}", searchVoucherDto);
+        return voucherService.search(searchVoucherDto);
+    }
+
+    @PostMapping(value = "/v1/voucher")
+    public VoucherDto searchClient(@RequestBody CreateVoucherDto createVoucherDto){
+        LOG.info("create voucher {}", createVoucherDto);
+        return voucherService.create(createVoucherDto);
+    }
 }

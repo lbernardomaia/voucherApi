@@ -1,7 +1,7 @@
 package com.voucher.api.v1.core.service;
 
-import com.voucher.api.v1.core.dto.ClientDto;
-import com.voucher.api.v1.core.dto.SearchClientDto;
+import com.voucher.api.v1.core.dto.client.ClientDto;
+import com.voucher.api.v1.core.dto.client.SearchClientDto;
 import com.voucher.api.v1.core.expection.ValidationException;
 import com.voucher.api.v1.core.mapper.ClientMapper;
 import com.voucher.api.v1.core.model.Client;
