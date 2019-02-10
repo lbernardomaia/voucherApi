@@ -1,4 +1,4 @@
-package com.voucher.api.v1.voucher;
+package com.voucher.api.v1.web.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -18,3 +18,5 @@
 voucher-client.iml
 .idea/
 target/
+spring-shell.log
+target/
