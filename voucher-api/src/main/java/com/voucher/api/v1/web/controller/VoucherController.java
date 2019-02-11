@@ -23,13 +23,13 @@ public class VoucherController {
     }
 
     @GetMapping("/v1/voucher")
-    public List<VoucherDto> searchVoucher(SearchVoucherDto searchVoucherDto){
+    public List<VoucherDto> search(SearchVoucherDto searchVoucherDto){
         LOG.info("Search Voucher {}", searchVoucherDto);
         return voucherService.search(searchVoucherDto);
     }
 
     @PostMapping(value = "/v1/voucher")
-    public VoucherDto searchClient(@RequestBody CreateVoucherDto createVoucherDto){
+    public VoucherDto create(@RequestBody CreateVoucherDto createVoucherDto){
         LOG.info("create voucher {}", createVoucherDto);
         return voucherService.create(createVoucherDto);
     }

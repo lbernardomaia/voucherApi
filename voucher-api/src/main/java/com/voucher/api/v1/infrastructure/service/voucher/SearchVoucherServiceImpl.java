@@ -25,7 +25,7 @@ public class SearchVoucherServiceImpl implements SearchVoucherService {
     private String endpoint;
 
     @Value("${businessId}")
-    private String branchId;
+    private String businessId;
 
     private RestTemplate restTemplate;
 
@@ -76,7 +76,7 @@ public class SearchVoucherServiceImpl implements SearchVoucherService {
     }
 
     private UriComponentsBuilder getUriComponentsBuilder(Voucher voucher, long currentPage) {
-        UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromHttpUrl(uri).pathSegment(branchId, endpoint);
+        UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromHttpUrl(uri).pathSegment(businessId, endpoint);
 
         searchVoucherQueryParameter.getQueryParams(voucher).ifPresent(uriComponentsBuilder::queryParams);
 

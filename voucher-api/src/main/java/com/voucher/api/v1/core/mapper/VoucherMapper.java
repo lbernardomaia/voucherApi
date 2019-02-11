@@ -15,6 +15,7 @@ public interface VoucherMapper {
 
     VoucherMapper INSTANCE = Mappers.getMapper( VoucherMapper.class );
 
+    @Mapping(source = "originalBalance", target = "balance")
     VoucherDto mapToDto(Voucher voucher);
 
     List<VoucherDto> mapToDto(List<Voucher> vouchers);

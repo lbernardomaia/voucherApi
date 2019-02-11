@@ -41,12 +41,12 @@ public class VoucherMapperTest {
     }
 
     @Test
-    public void givenVoucher_WhenHasOriginalBalance_ThenVoucherDtoHasOriginalBalance() {
+    public void givenVoucher_WhenHasOriginalBalance_ThenVoucherDtoHasBalance() {
         Voucher voucher = Voucher.builder().originalBalance(12D).build();
 
         VoucherDto voucherDto = voucherMapper.mapToDto(voucher);
 
-        assert voucher.getOriginalBalance().equals(voucherDto.getOriginalBalance());
+        assert voucher.getOriginalBalance().equals(voucherDto.getBalance());
     }
 
     @Test

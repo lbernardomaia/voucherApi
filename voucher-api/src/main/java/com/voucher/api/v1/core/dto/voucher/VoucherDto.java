@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class VoucherDto {
     private String clientId;
     private String serialNumber;
-    private Double originalBalance;
+    private Double balance;
 }
