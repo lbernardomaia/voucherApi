@@ -1,7 +1,9 @@
 package com.voucher.api.client.core.service;
 
+import com.voucher.api.client.core.dto.VoucherDto;
 import com.voucher.api.client.core.model.Voucher;
 import com.voucher.api.client.infrastructure.service.voucher.SearchVoucherService;
+import com.voucher.api.client.mapper.VoucherMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +12,7 @@ import org.mockito.Mock;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Collections;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
@@ -25,16 +28,19 @@ public class VoucherServiceTest {
     @Mock
     private SearchVoucherService searchVoucherService;
 
+    @Mock
+    private VoucherMapper voucherMapper;
+
     @Before
     public void setUp(){
     }
 
     @Test
-    public void givenSearchClientBy_WhenServiceReturnIsEmpty_ThenNoResultMessageIsReturned() {
+    public void givenSearchClientBy_WhenServiceReturnIsEmpty_ThenReturnIsEmpty() {
         when(searchVoucherService.search(any(Voucher.class))).thenReturn(Collections.emptyList());
 
-        String result = voucherService.search("", "");
+        final List<VoucherDto> search = voucherService.search("", "");
 
-        assertEquals("No result found", result);
+        assert search.isEmpty();
     }
 }

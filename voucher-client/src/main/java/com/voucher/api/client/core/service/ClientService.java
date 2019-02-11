@@ -1,9 +1,12 @@
 package com.voucher.api.client.core.service;
 
+import com.voucher.api.client.core.dto.ClientDto;
 import com.voucher.api.client.core.dto.SearchClientDto;
 
-public interface ClientService {
-    String getClientById(String clientId);
+import java.util.List;
 
-    String searchBy(SearchClientDto searchClientDto);
+public interface ClientService {
+    ClientDto getClientById(String clientId);
+
+    List<ClientDto> searchBy(SearchClientDto searchClientDto);
 }

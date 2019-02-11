@@ -1,5 +1,7 @@
 package com.voucher.api.client.core.service;
 
+import com.voucher.api.client.core.dto.VoucherDto;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +10,7 @@ import org.springframework.shell.jline.InteractiveShellApplicationRunner;
 import org.springframework.shell.jline.ScriptShellApplicationRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.assertNotNull;
+import java.util.List;
 
 @SpringBootTest(properties = {
         InteractiveShellApplicationRunner.SPRING_SHELL_INTERACTIVE_ENABLED + "=false",
@@ -21,16 +23,16 @@ public class VoucherServiceIT {
     private VoucherService voucherService;
 
     @Test
-    public void givenVouchert_WhenHasValidClientId_ThenReturnClient() {
-        String result = voucherService.search("u-55JsXUtlzGMs2OuYF0NA", "");
+    public void givenVouchert_WhenHasValidClientId_ThenReturnClientList() {
+        final List<VoucherDto> search = voucherService.search("u-55JsXUtlzGMs2OuYF0NA", "");
 
-        assertNotNull(result);
+        assert !search.isEmpty();
     }
 
     @Test
     public void givenNewVoucher_WhenHasValidParameter_ThenReturnVoucherCreated() {
-        String result = voucherService.create("WwEaIb0m4bhJphVtm2VgIw", 10d);
+        final VoucherDto voucherDto = voucherService.create("WwEaIb0m4bhJphVtm2VgIw", 10d);
 
-        assertNotNull(result);
+        assert StringUtils.isNotBlank(voucherDto.getSerialNumber());
     }
 }

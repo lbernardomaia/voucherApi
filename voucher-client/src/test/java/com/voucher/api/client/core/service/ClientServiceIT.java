@@ -1,5 +1,6 @@
 package com.voucher.api.client.core.service;
 
+import com.voucher.api.client.core.dto.ClientDto;
 import com.voucher.api.client.core.dto.SearchClientDto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,8 +10,7 @@ import org.springframework.shell.jline.InteractiveShellApplicationRunner;
 import org.springframework.shell.jline.ScriptShellApplicationRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import java.util.List;
 
 @SpringBootTest(properties = {
         InteractiveShellApplicationRunner.SPRING_SHELL_INTERACTIVE_ENABLED + "=false",
@@ -24,15 +24,17 @@ public class ClientServiceIT {
 
     @Test
     public void givenGetClient_WhenHasValidCLientId_ThenReturnClient() {
-        String result = clientService.getClientById("u-55JsXUtlzGMs2OuYF0NA");
+        final String clientId = "u-55JsXUtlzGMs2OuYF0NA";
 
-        assertNotNull(result);
+        final ClientDto clientById = clientService.getClientById(clientId);
+
+        assert clientById.getClientId().equals(clientId);
     }
 
     @Test
     public void givenSearchClientBy_WhenHasValidParameter_ThenReturnClient() {
-        String result = clientService.searchBy(new SearchClientDto("", "", "BAILEY", ""));
+        final List<ClientDto> bailey = clientService.searchBy(new SearchClientDto("", "", "BAILEY", ""));
 
-        assertNotNull(result);
+        assert !bailey.isEmpty();
     }
 }

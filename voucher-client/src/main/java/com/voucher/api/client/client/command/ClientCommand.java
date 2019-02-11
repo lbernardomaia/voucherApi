@@ -1,5 +1,6 @@
-package com.voucher.api.client.command;
+package com.voucher.api.client.client.command;
 
+import com.voucher.api.client.client.transformer.Transformer;
 import com.voucher.api.client.core.dto.SearchClientDto;
 import com.voucher.api.client.core.service.ClientService;
 import org.slf4j.Logger;
@@ -10,6 +11,7 @@ import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 
+import java.io.IOException;
 import java.util.function.Supplier;
 
 @ShellComponent
@@ -19,19 +21,20 @@ public class ClientCommand {
     private static Logger LOG = LoggerFactory.getLogger(ClientCommand.class);
 
     private ClientService clientService;
+    private Transformer transformer;
 
     @Autowired
-    public ClientCommand(ClientService clientService) {
+    public ClientCommand(ClientService clientService, Transformer transformer) {
         this.clientService = clientService;
+        this.transformer = transformer;
     }
 
     @ShellMethod(value = "Search a client by ID. E.g. client G7cwfHokOtDorjqFMuI3tA", key = "client")
-    public String getClient(final String id) {
+    public String getClient(final String id) throws IOException {
         LOG.info("getClient ID {}", id);
 
-        Supplier<String> getClientById = () -> clientService.getClientById(id);
+        return transformer.transform(() -> clientService.getClientById(id));
 
-        return executeSearch(getClientById);
     }
 
     @ShellMethod(value = "Search a client by email, firstName, last-name, phone." +
@@ -39,20 +42,11 @@ public class ClientCommand {
     public String searchClient(@ShellOption(defaultValue = "") final String email,
                                  @ShellOption(defaultValue = "") final String firstName,
                                  @ShellOption(defaultValue = "") final String lastName,
-                                 @ShellOption(defaultValue = "") final String phone) {
+                                 @ShellOption(defaultValue = "") final String phone) throws IOException {
         LOG.info("Search Client by(email {}, firstName {}, lastName {}, phone {})", email, firstName, lastName, phone);
 
-        Supplier<String> searchBy = () -> clientService.searchBy(new SearchClientDto(email, phone, firstName, lastName));
+        Supplier<Object> search = () -> clientService.searchBy(new SearchClientDto(email, phone, firstName, lastName));
 
-        return executeSearch(searchBy);
+        return transformer.transform(search);
     }
-
-    private String executeSearch(Supplier<String> action){
-        try{
-            return action.get();
-        }catch (Exception e){
-            return "Unable to process the operation. Error: " + e.getMessage();
-        }
-    }
-
 }

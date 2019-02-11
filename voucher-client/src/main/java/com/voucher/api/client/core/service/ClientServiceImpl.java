@@ -1,7 +1,6 @@
 package com.voucher.api.client.core.service;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.voucher.api.client.core.dto.ClientDto;
 import com.voucher.api.client.core.dto.SearchClientDto;
 import com.voucher.api.client.core.model.Client;
 import com.voucher.api.client.infrastructure.service.client.GetClientByIdService;
@@ -13,10 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.Optional;
-
-import static java.util.Optional.empty;
-import static java.util.Optional.of;
+import java.util.List;
 
 @Service
 public class ClientServiceImpl implements ClientService{
@@ -25,51 +21,32 @@ public class ClientServiceImpl implements ClientService{
 
     private GetClientByIdService getClientByIdService;
     private SearchClientService searchByClientService;
-    private ObjectMapper objectMapper;
     private ClientMapper clientMapper;
 
     @Autowired
     public ClientServiceImpl(GetClientByIdService getClientByIdService,
-                             ObjectMapper objectMapper,
                              SearchClientService searchByClientService,
                              ClientMapper clientMapper) {
         this.getClientByIdService = getClientByIdService;
-        this.objectMapper = objectMapper;
         this.searchByClientService = searchByClientService;
         this.clientMapper = clientMapper;
     }
 
     @Override
-    public String getClientById(String clientId) {
-        final Client search = getClientByIdService.search(clientId);
+    public ClientDto getClientById(String clientId) {
+        Client client = getClientByIdService.search(clientId);
+        LOG.info("Client {}", client);
 
-        return result(search != null, search);
-    }
-
-    private String result(boolean hasResult, Object target) {
-        if (!hasResult){
-            return "No result found";
-        }else{
-            return convertToJson(target).orElse("");
-        }
-    }
-
-    private Optional<String> convertToJson(Object search) {
-        try {
-            return of(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(search));
-        } catch (JsonProcessingException e) {
-            LOG.error(e.getMessage());
-        }
-
-        return empty();
+        return clientMapper.mapToDto(client);
     }
 
     @Override
-    public String searchBy(SearchClientDto searchClientDto) {
+    public List<ClientDto> searchBy(SearchClientDto searchClientDto) {
         Client client = clientMapper.mapToModel(searchClientDto);
 
         Collection<Client> clients = searchByClientService.searchBy(client);
+        LOG.info("Found {} clients", clients.size());
 
-        return result(!clients.isEmpty(), clients);
+        return clientMapper.mapToDto(clients);
     }
 }

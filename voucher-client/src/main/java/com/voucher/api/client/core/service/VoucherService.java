@@ -1,7 +1,11 @@
 package com.voucher.api.client.core.service;
 
-public interface VoucherService {
-    String search(String clientId, String serialNumber);
+import com.voucher.api.client.core.dto.VoucherDto;
 
-    String create(String clientId, Double balance);
+import java.util.List;
+
+public interface VoucherService {
+    List<VoucherDto> search(String clientId, String serialNumber);
+
+    VoucherDto create(String clientId, Double balance);
 }
