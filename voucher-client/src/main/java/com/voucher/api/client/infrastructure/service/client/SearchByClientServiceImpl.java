@@ -1,4 +1,4 @@
-package com.voucher.api.client.infrastructure;
+package com.voucher.api.client.infrastructure.service.client;
 
 import com.voucher.api.client.core.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +15,9 @@ import java.util.Collection;
 import java.util.List;
 
 @Service
-public class SearchByClientServiceImpl implements SearchByClientService {
+public class SearchByClientServiceImpl implements SearchClientService {
 
-    @Value("${voucher.api.v1.client}")
+    @Value("${voucherApi.v1.client}")
     private String clientEndpoint;
 
     private RestTemplate restTemplate;

@@ -2,8 +2,8 @@ package com.voucher.api.client.core.service;
 
 import com.voucher.api.client.core.dto.SearchClientDto;
 import com.voucher.api.client.core.model.Client;
-import com.voucher.api.client.infrastructure.GetClientByIdService;
-import com.voucher.api.client.infrastructure.SearchByClientService;
+import com.voucher.api.client.infrastructure.service.client.GetClientByIdService;
+import com.voucher.api.client.infrastructure.service.client.SearchClientService;
 import com.voucher.api.client.mapper.ClientMapper;
 import org.junit.Before;
 import org.junit.Test;
@@ -29,7 +29,7 @@ public class ClientServiceTest {
     private GetClientByIdService getClientByIdService;
 
     @Mock
-    private SearchByClientService searchByClientService;
+    private SearchClientService searchByClientService;
 
     @Mock
     private ClientMapper clientMapper;

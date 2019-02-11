@@ -1,4 +1,4 @@
-package com.voucher.api.client.infrastructure;
+package com.voucher.api.client.infrastructure.service.client;
 
 import com.voucher.api.client.core.model.Client;
 import org.springframework.stereotype.Service;

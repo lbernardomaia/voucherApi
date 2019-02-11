@@ -4,8 +4,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.voucher.api.client.core.dto.SearchClientDto;
 import com.voucher.api.client.core.model.Client;
-import com.voucher.api.client.infrastructure.GetClientByIdService;
-import com.voucher.api.client.infrastructure.SearchByClientService;
+import com.voucher.api.client.infrastructure.service.client.GetClientByIdService;
+import com.voucher.api.client.infrastructure.service.client.SearchClientService;
 import com.voucher.api.client.mapper.ClientMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,14 +24,14 @@ public class ClientServiceImpl implements ClientService{
     private static Logger LOG = LoggerFactory.getLogger(ClientServiceImpl.class);
 
     private GetClientByIdService getClientByIdService;
-    private SearchByClientService searchByClientService;
+    private SearchClientService searchByClientService;
     private ObjectMapper objectMapper;
     private ClientMapper clientMapper;
 
     @Autowired
     public ClientServiceImpl(GetClientByIdService getClientByIdService,
                              ObjectMapper objectMapper,
-                             SearchByClientService searchByClientService,
+                             SearchClientService searchByClientService,
                              ClientMapper clientMapper) {
         this.getClientByIdService = getClientByIdService;
         this.objectMapper = objectMapper;

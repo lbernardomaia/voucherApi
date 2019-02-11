@@ -18,7 +18,6 @@ public class ClientCommand {
 
     private static Logger LOG = LoggerFactory.getLogger(ClientCommand.class);
 
-
     private ClientService clientService;
 
     @Autowired
@@ -26,27 +25,29 @@ public class ClientCommand {
         this.clientService = clientService;
     }
 
-    @ShellMethod(value = "Search a client by ID. E.g. getClient -id G7cwfHokOtDorjqFMuI3tA", key = "getClient", prefix="-")
+    @ShellMethod(value = "Search a client by ID. E.g. client G7cwfHokOtDorjqFMuI3tA", key = "client")
     public String getClient(final String id) {
+        LOG.info("getClient ID {}", id);
+
         Supplier<String> getClientById = () -> clientService.getClientById(id);
 
         return executeSearch(getClientById);
     }
 
     @ShellMethod(value = "Search a client by email, firstName, last-name, phone." +
-            " E.g. searchClientBy -first-name BAILEY", key = "searchClientBy"
-            ,prefix="-")
-    public String searchClientBy(@ShellOption(defaultValue = "") final String email,
+            " E.g. searchClient -first-name BAILEY", key = "searchClient", prefix="-")
+    public String searchClient(@ShellOption(defaultValue = "") final String email,
                                  @ShellOption(defaultValue = "") final String firstName,
                                  @ShellOption(defaultValue = "") final String lastName,
                                  @ShellOption(defaultValue = "") final String phone) {
+        LOG.info("Search Client by(email {}, firstName {}, lastName {}, phone {})", email, firstName, lastName, phone);
 
         Supplier<String> searchBy = () -> clientService.searchBy(new SearchClientDto(email, phone, firstName, lastName));
 
         return executeSearch(searchBy);
     }
 
-    private  String executeSearch(Supplier<String> action){
+    private String executeSearch(Supplier<String> action){
         try{
             return action.get();
         }catch (Exception e){
