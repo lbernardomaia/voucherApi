@@ -3,12 +3,10 @@ package com.voucher.api.v1.core.service;
 import com.voucher.api.v1.core.dto.voucher.CreateVoucherDto;
 import com.voucher.api.v1.core.dto.voucher.SearchVoucherDto;
 import com.voucher.api.v1.core.dto.voucher.VoucherDto;
-import com.voucher.api.v1.core.expection.ValidationException;
 import com.voucher.api.v1.core.mapper.VoucherMapper;
 import com.voucher.api.v1.core.model.Voucher;
 import com.voucher.api.v1.infrastructure.service.voucher.CreateVoucherService;
 import com.voucher.api.v1.infrastructure.service.voucher.SearchVoucherService;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,32 +44,24 @@ public class VoucherServiceImpl implements VoucherService {
     public List<VoucherDto> search(SearchVoucherDto searchVoucherDto) {
         Voucher voucher = voucherMapper.mapToModel(searchVoucherDto);
 
-        return voucherMapper.mapToDto(searchVoucherService.search(voucher));
+        final List<Voucher> vouchers = searchVoucherService.search(voucher);
+        LOG.info("Found {} Vouchers", vouchers.size());
+
+        return voucherMapper.mapToDto(vouchers);
     }
 
     @Override
     public VoucherDto create(CreateVoucherDto createVoucherDto) {
-        validateFields(createVoucherDto);
-
         Voucher voucher = voucherMapper.mapToModel(createVoucherDto);
         voucher.setVoucherId(voucherId);
         voucher.setCreatingBranchId(branchId);
         voucher.setExpiryDate(LocalDateTime.now());
         voucher.setIssueDate(LocalDateTime.now());
 
+        LOG.info("Voucher to be saved {}", voucher);
         Voucher voucherSaved = createVoucherService.create(voucher);
         LOG.info("Voucher saved {}", voucherSaved);
 
         return voucherMapper.mapToDto(voucherSaved);
-    }
-
-    private void validateFields(CreateVoucherDto createVoucherDto) {
-        if (StringUtils.isBlank(createVoucherDto.getClientId())){
-            throw new ValidationException("ClientId is required");
-        }
-
-        if (createVoucherDto.getBalance() == null || createVoucherDto.getBalance() <= 0){
-            throw new ValidationException("Balance is invalid");
-        }
     }
 }

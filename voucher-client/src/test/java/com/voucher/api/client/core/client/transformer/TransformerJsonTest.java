@@ -1,4 +1,4 @@
-package com.voucher.api.client.core.terminal.transformer;
+package com.voucher.api.client.core.client.transformer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.voucher.api.client.terminal.transformer.Transformer;
