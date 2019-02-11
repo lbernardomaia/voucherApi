@@ -1,8 +1,8 @@
-package com.voucher.api.client.core.client.transformer;
+package com.voucher.api.client.core.terminal.transformer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.voucher.api.client.client.transformer.Transformer;
-import com.voucher.api.client.client.transformer.TransformerJson;
+import com.voucher.api.client.terminal.transformer.Transformer;
+import com.voucher.api.client.terminal.transformer.TransformerJson;
 import com.voucher.api.client.core.dto.ClientDto;
 import org.junit.Before;
 import org.junit.Test;

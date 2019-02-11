@@ -1,4 +1,4 @@
-package com.voucher.api.client.client.transformer;
+package com.voucher.api.client.terminal.transformer;
 
 import java.io.IOException;
 import java.util.function.Supplier;

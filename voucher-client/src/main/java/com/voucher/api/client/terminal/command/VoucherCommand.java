@@ -1,6 +1,6 @@
-package com.voucher.api.client.client.command;
+package com.voucher.api.client.terminal.command;
 
-import com.voucher.api.client.client.transformer.Transformer;
+import com.voucher.api.client.terminal.transformer.Transformer;
 import com.voucher.api.client.core.service.VoucherService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.voucher.api.client.client.transformer;
+package com.voucher.api.client.terminal.transformer;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
