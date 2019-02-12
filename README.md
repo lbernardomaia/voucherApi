@@ -10,6 +10,7 @@ Modules:
 
 The main stack is:
 
+-   Java 8
 -   SpringBoot 2.1
 -   Netflix Hystrix
 -   Spring Shell
@@ -33,7 +34,7 @@ The API is running on port 8080.
 
 E.g. http://localhost:8080/api/v1/client
 
-## ClientAPI
+## Voucher Client
 ```
 java -jar voucher-client/target/voucher-api-client-0.0.1-SNAPSHOT.jar 
 ```
