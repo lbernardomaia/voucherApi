@@ -37,14 +37,11 @@ E.g. http://localhost:8080/api/v1/client
 ```
 java -jar voucher-client/target/voucher-api-client-0.0.1-SNAPSHOT.jar 
 ```
-### Interacting with the Client API
+## Interacting with the Client API
 
 The command ```help```  display a list of commands available
 
-
-####List of commands
-
-######Client Commands
+###Client Commands
 -   Search a client by ID
 ```
 client G7cwfHokOtDorjqFMuI3tA
@@ -63,7 +60,7 @@ searchClient -email 0.109006269972581@example.com -last-name McCreary
 ```
 searchClient -phone 2273077387365 
 ```
-######Voucher Commands
+###Voucher Commands
 
 - Search Voucher by clientId
 
