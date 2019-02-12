@@ -4,9 +4,9 @@ The project interact with a third part API.
 
 Modules:
 
-- The VoucherAPI Project aims to communicate with a third party API.
+- voucher-api - The module aims to communicate with a third party API.
 
-- The Client API Project is a CLI that interacts with the VoucherAPI in order to perform the operations.
+- voucher-client - The module is a CLI that interacts with the VoucherAPI in order to perform the operations.
 
 The main stack is:
 
