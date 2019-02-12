@@ -25,7 +25,7 @@ cd voucherApi
 mvn clean package  
 ```
 
-### VoucherAPI
+## VoucherAPI
 ```
 java -jar voucher-api/target/voucher-api-0.0.1-SNAPSHOT.jar 
 ```
@@ -41,7 +41,7 @@ java -jar voucher-client/target/voucher-api-client-0.0.1-SNAPSHOT.jar
 
 The command ```help```  display a list of commands available
 
-##Client Commands
+## Client Commands
 -   Search a client by ID
 ```
 client G7cwfHokOtDorjqFMuI3tA
@@ -60,7 +60,7 @@ searchClient -email 0.109006269972581@example.com -last-name McCreary
 ```
 searchClient -phone 2273077387365 
 ```
-##Voucher Commands
+## Voucher Commands
 
 - Search Voucher by clientId
 
