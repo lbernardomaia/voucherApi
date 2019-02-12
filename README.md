@@ -1,6 +1,6 @@
 # voucherApi
 
-The project interact with a third part API. 
+The project interact with a third party API. 
 
 Modules:
 
