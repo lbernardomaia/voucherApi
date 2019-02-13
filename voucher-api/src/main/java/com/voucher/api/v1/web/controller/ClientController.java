@@ -30,7 +30,7 @@ public class ClientController {
     }
 
     @InitBinder("searchClientDto")
-    protected void searchClientDtoInit(WebDataBinder binder) {
+    protected void initBinder(WebDataBinder binder) {
         binder.addValidators(searchClientValidator);
     }
 

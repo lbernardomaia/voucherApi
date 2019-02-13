@@ -2,6 +2,7 @@ package com.voucher.api.v1.infrastructure.service.client;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.voucher.api.v1.core.model.Client;
+import com.voucher.api.v1.infrastructure.service.PagedResourcesSearch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
+import java.util.function.Function;
 
 @Service
 public class SearchByClientServiceImpl implements SearchByClientService {
@@ -37,58 +37,39 @@ public class SearchByClientServiceImpl implements SearchByClientService {
 
     private SearchByClientQueryParameter searchByClientQueryParameter;
 
+    private PagedResourcesSearch<Client> pagedResource;
+
     @Autowired
-    public SearchByClientServiceImpl(RestTemplate restTemplate, SearchByClientQueryParameter searchByClientQueryParameter) {
+    public SearchByClientServiceImpl(RestTemplate restTemplate,
+                                     SearchByClientQueryParameter searchByClientQueryParameter,
+                                     PagedResourcesSearch<Client> pagedResourcesSearch) {
         this.restTemplate = restTemplate;
         this.searchByClientQueryParameter = searchByClientQueryParameter;
+        this.pagedResource = pagedResourcesSearch;
     }
 
     @Override
     @HystrixCommand(fallbackMethod = "searchFallback")
-    public Collection<Client> search(Client client){
+    public Collection<Client> search(final Client client){
         if (client == null){
             return Collections.emptyList();
         }
 
-        List<Client> result = new ArrayList<>();
+        Function<Long, ResponseEntity<PagedResources<Client>>> api = nextPage -> getPagedResourcesResponseEntity(client, nextPage);
 
-        long totalPage = 0L;
-        long currentPage = 0L;
-
-        while(currentPage == 0L || currentPage < totalPage) {
-            UriComponentsBuilder uriComponentsBuilder = getUriComponentsBuilder(client, currentPage);
-
-            ResponseEntity<PagedResources<Client>> clients = callClientEndpoint(uriComponentsBuilder);
-
-            if (clients.getBody() == null){
-                break;
-            }
-
-            if (totalPage == 0){
-                PagedResources.PageMetadata metadata = clients.getBody().getMetadata();
-                totalPage = metadata.getTotalPages();
-            }
-
-            ++currentPage;
-            result.addAll(clients.getBody().getContent());
-        }
-
-        return result;
+        return pagedResource.search(api);
     }
 
-    private ResponseEntity<PagedResources<Client>> callClientEndpoint(UriComponentsBuilder uriComponentsBuilder) {
-        String url = uriComponentsBuilder.toUriString();
-        LOG.info("Call the API {}", url);
-        return restTemplate.exchange(url, HttpMethod.GET,null, new ParameterizedTypeReference<PagedResources<Client>>() {});
-    }
-
-    private UriComponentsBuilder getUriComponentsBuilder(Client client, long currentPage) {
+    private ResponseEntity<PagedResources<Client>> getPagedResourcesResponseEntity(Client client, Long nextPage) {
         UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromHttpUrl(uri).pathSegment(businessId, endpoint);
 
         searchByClientQueryParameter.getQueryParams(client).ifPresent(uriComponentsBuilder::queryParams);
 
-        uriComponentsBuilder.queryParam("page", currentPage);
-        return uriComponentsBuilder;
+        uriComponentsBuilder.queryParam("page", nextPage);
+
+        String url = uriComponentsBuilder.toUriString();
+        LOG.info("Call the API {}", url);
+        return restTemplate.exchange(url, HttpMethod.GET,null, new ParameterizedTypeReference<PagedResources<Client>>() {});
     }
 
     public Collection<Client> searchFallback(Client client) {

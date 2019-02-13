@@ -30,7 +30,7 @@ public class VoucherController {
 
 
     @InitBinder("createVoucherDto")
-    protected void searchClientDtoInit(WebDataBinder binder) {
+    protected void initBinder(WebDataBinder binder) {
         binder.addValidators(voucherBalanceValidator);
     }
 

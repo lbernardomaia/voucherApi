@@ -2,6 +2,7 @@ package com.voucher.api.v1.infrastructure.service.voucher;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.voucher.api.v1.core.model.Voucher;
+import com.voucher.api.v1.infrastructure.service.PagedResourcesSearch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -38,10 +38,15 @@ public class SearchVoucherServiceImpl implements SearchVoucherService {
 
     private SearchVoucherQueryParameter searchVoucherQueryParameter;
 
+    private PagedResourcesSearch<Voucher> pagedResource;
+
     @Autowired
-    public SearchVoucherServiceImpl(RestTemplate restTemplate, SearchVoucherQueryParameter searchVoucherQueryParameter) {
+    public SearchVoucherServiceImpl(RestTemplate restTemplate,
+                                    SearchVoucherQueryParameter searchVoucherQueryParameter,
+                                    PagedResourcesSearch<Voucher> pagedResourcesSearch) {
         this.restTemplate = restTemplate;
         this.searchVoucherQueryParameter = searchVoucherQueryParameter;
+        this.pagedResource = pagedResourcesSearch;
     }
 
     @Override
@@ -51,50 +56,21 @@ public class SearchVoucherServiceImpl implements SearchVoucherService {
             return Collections.emptyList();
         }
 
-        Function<Long, UriComponentsBuilder> function = page -> getUriComponentsBuilder(voucher, page);
-        function.apply(1L);
+        Function<Long, ResponseEntity<PagedResources<Voucher>>> api = nextPage -> getPagedResourcesResponseEntity(voucher, nextPage);
 
-        return searchAll(function);
+        return pagedResource.search(api);
     }
 
-    private List<Voucher> searchAll(Function<Long, UriComponentsBuilder> uriComponentBuilder) {
-        List<Voucher> result = new ArrayList<>();
-
-        long totalPage = 0L;
-        long currentPage = 0L;
-
-        while(currentPage == 0L || currentPage < totalPage) {
-            UriComponentsBuilder componentBuilder = uriComponentBuilder.apply(currentPage);
-            ResponseEntity<PagedResources<Voucher>> vouchers = callClientEndpoint(componentBuilder);
-
-            if (vouchers.getBody() == null){
-                break;
-            }
-
-            if (totalPage == 0){
-                PagedResources.PageMetadata metadata = vouchers.getBody().getMetadata();
-                totalPage = metadata.getTotalPages();
-            }
-
-            ++currentPage;
-            result.addAll(vouchers.getBody().getContent());
-        }
-        return result;
-    }
-
-    private ResponseEntity<PagedResources<Voucher>> callClientEndpoint(UriComponentsBuilder uriComponentsBuilder) {
-        String url = uriComponentsBuilder.toUriString();
-        LOG.info("Call the API {}", url);
-        return restTemplate.exchange(url, HttpMethod.GET,null, new ParameterizedTypeReference<PagedResources<Voucher>>() {});
-    }
-
-    private UriComponentsBuilder getUriComponentsBuilder(Voucher voucher, long currentPage) {
+    private ResponseEntity<PagedResources<Voucher>> getPagedResourcesResponseEntity(Voucher voucher, Long nextPage) {
         UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromHttpUrl(uri).pathSegment(businessId, endpoint);
 
         searchVoucherQueryParameter.getQueryParams(voucher).ifPresent(uriComponentsBuilder::queryParams);
 
-        uriComponentsBuilder.queryParam("page", currentPage);
-        return uriComponentsBuilder;
+        uriComponentsBuilder.queryParam("page", nextPage);
+
+        String url = uriComponentsBuilder.toUriString();
+        LOG.info("Call the API {}", url);
+        return restTemplate.exchange(url, HttpMethod.GET,null, new ParameterizedTypeReference<PagedResources<Voucher>>() {});
     }
 
     public List<Voucher> searchFallback(Voucher voucher) {
