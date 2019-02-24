@@ -1,6 +1,7 @@
-package com.voucher.api.v1.infrastructure.service.voucher;
+package com.voucher.api.v1.infrastructure.service.voucher.integration;
 
 import com.voucher.api.v1.core.model.Voucher;
+import com.voucher.api.v1.infrastructure.service.voucher.SearchVoucherService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +22,6 @@ public class SearchVoucherServiceIT {
         Collection<Voucher> vouchers = searchVoucherService.search(null);
 
         assert vouchers.isEmpty();
-    }
-
-    @Test
-    public void givenVoucherEndpoint_WhenClientIsEmpty_ShouldReturnSomething() {
-        Collection<Voucher> vouchers = searchVoucherService.search(new Voucher());
-
-        assert !vouchers.isEmpty();
     }
 
     @Test

@@ -1,0 +1,172 @@
+{
+  "_embedded" : {
+    "vouchers" : [ {
+      "voucherId" : "RhxCKX3sQX2Bh6G8qnKzMw",
+      "serialNumber" : "10980",
+      "issueDate" : "2085-09-27T15:22:52.000Z",
+      "expiryDate" : "2018-09-27T15:22:52.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 8.00,
+      "remainingBalance" : 500.00
+    }, {
+      "voucherId" : "mfm85uFCb5oEJvbmlQEPVA",
+      "serialNumber" : "10981",
+      "issueDate" : "2038-09-27T15:26:31.000Z",
+      "expiryDate" : "2018-09-27T15:26:31.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "Jn26yuukCIBugSD9nAGWjQ",
+      "serialNumber" : "10982",
+      "issueDate" : "2026-04-27T15:27:30.000Z",
+      "expiryDate" : "2018-09-27T15:27:30.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 9.00,
+      "remainingBalance" : 9.00
+    }, {
+      "voucherId" : "rA_Bgo1KNvTFnsZMVEO5TA",
+      "serialNumber" : "10979",
+      "issueDate" : "2024-10-27T16:22:12.000Z",
+      "expiryDate" : "2018-09-27T15:22:12.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 7.00,
+      "remainingBalance" : 7.00
+    }, {
+      "voucherId" : "mc6_2UB0H5kjRHueALQ4mA",
+      "serialNumber" : "10983",
+      "issueDate" : "2023-10-27T15:28:39.000Z",
+      "expiryDate" : "2018-09-27T15:28:39.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 6.00,
+      "remainingBalance" : 6.00
+    }, {
+      "voucherId" : "NjWWfKZX9mWU7tZBzmlVmg",
+      "serialNumber" : "2018-12-31",
+      "issueDate" : "2019-12-31T10:00:00.000Z",
+      "expiryDate" : "2018-12-31T10:00:00.000Z",
+      "clientId" : "uCBIh9U0ni-68I8zIQ7epQ",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 100.00,
+      "remainingBalance" : 100.00
+    }, {
+      "voucherId" : "i3PstXbcuJgv2szNzdptFw",
+      "serialNumber" : "10977",
+      "issueDate" : "2019-09-27T14:58:09.000Z",
+      "expiryDate" : "2018-09-27T14:58:09.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "1VA18Lm_VjTY9z2bCJ0pUA",
+      "serialNumber" : "10972",
+      "issueDate" : "2019-09-27T10:23:59.000Z",
+      "expiryDate" : "2018-09-27T10:23:59.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "7N92MTtw3avfn2DFrvK_XA",
+      "serialNumber" : "10971",
+      "issueDate" : "2019-09-27T10:15:59.000Z",
+      "expiryDate" : "2018-09-27T10:15:59.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 55.00,
+      "remainingBalance" : 55.00
+    }, {
+      "voucherId" : "zosp3H4Dl44CnQ1RmdLkGw",
+      "serialNumber" : "10970",
+      "issueDate" : "2019-09-27T10:15:36.000Z",
+      "expiryDate" : "2018-09-27T10:15:36.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 55.00,
+      "remainingBalance" : 55.00
+    }, {
+      "voucherId" : "-9JKrttEVXnMeOZwr8PMmg",
+      "serialNumber" : "10969",
+      "issueDate" : "2019-09-27T09:20:46.000Z",
+      "expiryDate" : "2018-09-27T09:20:46.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "Dgy3vnnGvyx1IMnq2QZeYA",
+      "serialNumber" : "10968",
+      "issueDate" : "2019-09-27T09:20:07.000Z",
+      "expiryDate" : "2018-09-27T09:20:07.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "hZGcxYxqq1-KqLltK7mxKA",
+      "serialNumber" : "10967",
+      "issueDate" : "2019-09-27T09:18:44.000Z",
+      "expiryDate" : "2018-09-27T09:18:44.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "WNNv0C_3jJplUbZKJ7C9mA",
+      "serialNumber" : "10966",
+      "issueDate" : "2019-09-27T09:17:21.000Z",
+      "expiryDate" : "2018-09-27T09:17:21.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "qbzqcJxRgwu5sPcMXVHwDw",
+      "serialNumber" : "10965",
+      "issueDate" : "2019-09-27T08:52:13.000Z",
+      "expiryDate" : "2018-09-27T08:52:13.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "8Q_4bh45swCNk1XThpzztA",
+      "serialNumber" : "10964",
+      "issueDate" : "2019-09-27T08:46:32.000Z",
+      "expiryDate" : "2018-09-27T08:46:32.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 55.00,
+      "remainingBalance" : 55.00
+    }, {
+      "voucherId" : "zwqSJsMN19ZTyg7JAFZr8A",
+      "serialNumber" : "10963",
+      "issueDate" : "2019-09-27T08:32:41.000Z",
+      "expiryDate" : "2018-09-27T08:32:41.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "zfzC3ePzaFiuuf82pPxkxg",
+      "serialNumber" : "10962",
+      "issueDate" : "2019-09-27T08:32:28.000Z",
+      "expiryDate" : "2018-09-27T08:32:28.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 125.00
+    }, {
+      "voucherId" : "0IPv2gnxzX_7wxy4CxRPEA",
+      "serialNumber" : "10961",
+      "issueDate" : "2019-09-27T08:13:49.000Z",
+      "expiryDate" : "2018-09-27T08:13:49.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    }, {
+      "voucherId" : "cERU1ptNrfBiJbmGKszIqw",
+      "serialNumber" : "10960",
+      "issueDate" : "2019-09-27T08:13:33.000Z",
+      "expiryDate" : "2018-09-27T08:13:33.000Z",
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "originalBalance" : 5.00,
+      "remainingBalance" : 5.00
+    } ]
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 40,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

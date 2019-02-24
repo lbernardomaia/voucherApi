@@ -1,6 +1,7 @@
-package com.voucher.api.v1.infrastructure.service.client;
+package com.voucher.api.v1.infrastructure.service.client.integration;
 
 import com.voucher.api.v1.core.model.Client;
+import com.voucher.api.v1.infrastructure.service.client.SearchByClientService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +22,6 @@ public class SearchByClientServiceIT {
         Collection<Client> clients = searchByClient.search(null);
 
         assert clients.isEmpty();
-    }
-
-    @Test
-    public void givenClientEndpoint_WhenClientIsEmpty_ShouldReturnSomething() {
-        Collection<Client> clients = searchByClient.search(new Client());
-
-        assert !clients.isEmpty();
     }
 
     @Test

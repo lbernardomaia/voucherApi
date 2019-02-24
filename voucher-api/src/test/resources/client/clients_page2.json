@@ -1,0 +1,590 @@
+{
+  "_embedded" : {
+    "clients" : [ {
+      "clientId" : "sDaflYRZQ2rLQ7BtCE-aHg",
+      "version" : 13,
+      "firstName" : "Brandi",
+      "lastName" : "Bell",
+      "mobile" : "4851373899877",
+      "email" : "0.84851373899877@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-08-05T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "m6PqEH366ZAaeNsoqY1pWA",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "ralcaft-xbl6KgCSOUSO0Q",
+      "version" : 12,
+      "firstName" : "Brenda",
+      "lastName" : "Davis",
+      "mobile" : "13885352820837",
+      "email" : "0.113885352820837@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-09-08T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "hR4B-skVHc0lya4gKcfeHQ",
+      "version" : 13,
+      "firstName" : "Brian",
+      "lastName" : "Gronewoller",
+      "mobile" : "0418967650405",
+      "email" : "0.80418967650405@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2017-09-05T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "notes" : "Fri 8 Jun 2018: Multiple no-shows; need to get card info before next visit!-mt",
+      "smsMarketingConsent" : false,
+      "emailMarketingConsent" : false,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "87ygrgKZ7N6e0LqVwHkO-w",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "rDLXl3EmwXi5QYw58CSBpg",
+      "version" : 15,
+      "firstName" : "Brianna",
+      "lastName" : "Rosenberger",
+      "mobile" : "15276922224741",
+      "email" : "0.115276922224741@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-09-15T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : false,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "87ygrgKZ7N6e0LqVwHkO-w",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "d6AKc_Omo2cjLmV7tUQhcg",
+      "version" : 11,
+      "firstName" : "Brianna",
+      "lastName" : "Steele",
+      "mobile" : "7331855736933",
+      "landLine" : "404-951-6285",
+      "email" : "0.37331855736933@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2016-10-29T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "nMMpW574u8xxwDKdnnt1Rg",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "Dk0ciMVH8WvAvDEJpSBepA",
+      "version" : 15,
+      "firstName" : "Bridget",
+      "lastName" : "Mccracken",
+      "mobile" : "8397007626341",
+      "landLine" : "313-790-2651",
+      "email" : "0.38397007626341@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2017-02-18T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : false,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "nMMpW574u8xxwDKdnnt1Rg",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "ZxzVctrPax93KY2xGZs94A",
+      "version" : 12,
+      "firstName" : "Brittany",
+      "lastName" : "Castaneda",
+      "mobile" : "12321984725093",
+      "email" : "0.112321984725093@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-08-11T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "E0qFvL2PXzpdQPonA81j8w",
+      "version" : 13,
+      "firstName" : "Brittany",
+      "lastName" : "McWhorter",
+      "mobile" : "15053583925349",
+      "email" : "0.115053583925349@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-09-14T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "YwA4lLC9OYiaEx2jZ197rQ",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "ARO4lZuX12hP4WYJpBQLeA",
+      "version" : 11,
+      "firstName" : "Brittany",
+      "lastName" : "Seeberger",
+      "mobile" : "61542309937253",
+      "email" : "0.161542309937253@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2017-09-02T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "4wv6Vgj694bSg_hhCA1TNw",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "F8RmXfsznyBIMQudi8pbEw",
+      "version" : 11,
+      "firstName" : "Brittney",
+      "lastName" : "Lauren",
+      "mobile" : "63157217640549",
+      "email" : "0.163157217640549@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2017-12-22T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "sIBWOvwoOJuCauZIyV1upA",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "SZrEJsnW0CIn9VKSu5E2Gg",
+      "version" : 11,
+      "firstName" : "Brooke",
+      "lastName" : "Turner",
+      "mobile" : "2122406969445",
+      "email" : "0.62122406969445@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2017-03-29T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "L-jmKw6FvJMpaspvmkq6qg",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "-Ggx_YbEWh9WAelAUHTGYw",
+      "version" : 9,
+      "firstName" : "Bruce",
+      "lastName" : "Russell",
+      "mobile" : "09968342646885",
+      "email" : "0.109968342646885@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-07-21T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "9P-XKigeVPtu2bJfqtRCOg",
+      "version" : 12,
+      "firstName" : "Bryana",
+      "lastName" : "Bowman",
+      "mobile" : "08542413504613",
+      "landLine" : "678-338-1408",
+      "email" : "0.108542413504613@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-07-09T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "h7fxN5s6777f7i8rbMd-Ng",
+      "version" : 11,
+      "firstName" : "Brynly",
+      "lastName" : "Schlenk",
+      "mobile" : "10294760161381",
+      "email" : "0.110294760161381@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-08-10T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : false,
+      "emailMarketingConsent" : false,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "6MptKV_cSsGyk3pmDa5LsA",
+      "version" : 12,
+      "firstName" : "Buket",
+      "lastName" : "Tinoco",
+      "mobile" : "12425063940197",
+      "email" : "0.112425063940197@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-08-12T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "6QT-vYE0z-62mJD0G2W2jg",
+      "version" : 18,
+      "firstName" : "C.Ann",
+      "lastName" : "Gittings",
+      "mobile" : "0761248899173",
+      "email" : "0.90761248899173@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-06-30T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : false,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "YoEjlmY-L6i8Apcskx08Ng",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "rSQnuqPUrsQO8pCzK4KnWw",
+      "version" : 5,
+      "firstName" : "cahir",
+      "lastName" : "h",
+      "landLine" : "",
+      "email" : "cahir@phorest.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2019-01-11T17:24:48.000Z",
+      "gender" : "FEMALE",
+      "notes" : "",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "Fap0tOFQSavnVftb1HI3EA",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "16XiREYy4skmpJX1FN-w6w",
+      "version" : 13,
+      "firstName" : "Camila",
+      "lastName" : "Magana",
+      "mobile" : "16771570843749",
+      "email" : "0.116771570843749@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2018-10-04T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "4wv6Vgj694bSg_hhCA1TNw",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "1b1la0C5G5SpFpckOxMuew",
+      "version" : 13,
+      "firstName" : "Carina",
+      "lastName" : "Peterson",
+      "mobile" : "16462333198437",
+      "email" : "0.116462333198437@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2016-12-02T16:07:01.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "nMMpW574u8xxwDKdnnt1Rg",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    }, {
+      "clientId" : "q3J_BYYhTDIJlpJIg782Lw",
+      "version" : 11,
+      "firstName" : "Carla",
+      "lastName" : "Belmont",
+      "mobile" : "1868657336421",
+      "landLine" : "404-277-7711",
+      "email" : "0.31868657336421@example.com",
+      "address" : {
+        "streetAddress1" : "",
+        "streetAddress2" : "",
+        "city" : "",
+        "state" : "",
+        "postalCode" : "",
+        "country" : ""
+      },
+      "clientSince" : "2016-10-27T00:00:00.000Z",
+      "gender" : "FEMALE",
+      "smsMarketingConsent" : true,
+      "emailMarketingConsent" : true,
+      "smsReminderConsent" : true,
+      "emailReminderConsent" : true,
+      "preferredStaffId" : "YwA4lLC9OYiaEx2jZ197rQ",
+      "creditAccount" : {
+        "creditDays" : 0,
+        "creditLimit" : 200.00
+      },
+      "creatingBranchId" : "SE-J0emUgQnya14mOGdQSw",
+      "archived" : false,
+      "banned" : false
+    } ]
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 40,
+    "totalPages" : 1,
+    "number" : 1
+  }
+}
