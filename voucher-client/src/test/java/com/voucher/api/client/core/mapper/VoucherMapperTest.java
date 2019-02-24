@@ -2,7 +2,6 @@ package com.voucher.api.client.core.mapper;
 
 import com.voucher.api.client.core.dto.VoucherDto;
 import com.voucher.api.client.core.model.Voucher;
-import com.voucher.api.client.mapper.VoucherMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -3,7 +3,6 @@ package com.voucher.api.client.core.mapper;
 import com.voucher.api.client.core.dto.ClientDto;
 import com.voucher.api.client.core.dto.SearchClientDto;
 import com.voucher.api.client.core.model.Client;
-import com.voucher.api.client.mapper.ClientMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -23,7 +23,7 @@ public class VoucherServiceIT {
     private VoucherService voucherService;
 
     @Test
-    public void givenVouchert_WhenHasValidClientId_ThenReturnClientList() {
+    public void givenVoucher_WhenHasValidClientId_ThenReturnClientList() {
         final List<VoucherDto> search = voucherService.search("u-55JsXUtlzGMs2OuYF0NA", "");
 
         assert !search.isEmpty();

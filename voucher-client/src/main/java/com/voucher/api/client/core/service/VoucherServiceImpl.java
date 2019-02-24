@@ -4,7 +4,7 @@ import com.voucher.api.client.core.dto.VoucherDto;
 import com.voucher.api.client.core.model.Voucher;
 import com.voucher.api.client.infrastructure.service.voucher.CreateVoucherService;
 import com.voucher.api.client.infrastructure.service.voucher.SearchVoucherService;
-import com.voucher.api.client.mapper.VoucherMapper;
+import com.voucher.api.client.core.mapper.VoucherMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

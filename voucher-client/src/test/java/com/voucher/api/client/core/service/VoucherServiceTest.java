@@ -3,7 +3,7 @@ package com.voucher.api.client.core.service;
 import com.voucher.api.client.core.dto.VoucherDto;
 import com.voucher.api.client.core.model.Voucher;
 import com.voucher.api.client.infrastructure.service.voucher.SearchVoucherService;
-import com.voucher.api.client.mapper.VoucherMapper;
+import com.voucher.api.client.core.mapper.VoucherMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +14,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 

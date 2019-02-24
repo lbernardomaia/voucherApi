@@ -5,7 +5,7 @@ import com.voucher.api.client.core.dto.SearchClientDto;
 import com.voucher.api.client.core.model.Client;
 import com.voucher.api.client.infrastructure.service.client.GetClientByIdService;
 import com.voucher.api.client.infrastructure.service.client.SearchClientService;
-import com.voucher.api.client.mapper.ClientMapper;
+import com.voucher.api.client.core.mapper.ClientMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

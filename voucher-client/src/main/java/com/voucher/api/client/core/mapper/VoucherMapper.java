@@ -1,4 +1,4 @@
-package com.voucher.api.client.mapper;
+package com.voucher.api.client.core.mapper;
 
 import com.voucher.api.client.core.dto.VoucherDto;
 import com.voucher.api.client.core.model.Voucher;
