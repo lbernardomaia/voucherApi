@@ -1,6 +1,8 @@
 # voucherApi
 
-The project interact with a third party API. 
+The project interacts with a third party API using a CLI App.
+
+![API Design](https://github.com/lbernardomaia/voucherApi/blob/master/api_design.jpg)
 
 Modules:
 
