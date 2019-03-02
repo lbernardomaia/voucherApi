@@ -7,18 +7,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.hateoas.PagedResources;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.Function;
+import java.util.function.Supplier;
 
 @Service
 public class SearchVoucherServiceImpl implements SearchVoucherService {
@@ -34,17 +28,13 @@ public class SearchVoucherServiceImpl implements SearchVoucherService {
     @Value("${businessId}")
     private String businessId;
 
-    private RestTemplate restTemplate;
-
     private SearchVoucherQueryParameter searchVoucherQueryParameter;
 
     private PagedResourcesSearch<Voucher> pagedResource;
 
     @Autowired
-    public SearchVoucherServiceImpl(RestTemplate restTemplate,
-                                    SearchVoucherQueryParameter searchVoucherQueryParameter,
+    public SearchVoucherServiceImpl(SearchVoucherQueryParameter searchVoucherQueryParameter,
                                     PagedResourcesSearch<Voucher> pagedResourcesSearch) {
-        this.restTemplate = restTemplate;
         this.searchVoucherQueryParameter = searchVoucherQueryParameter;
         this.pagedResource = pagedResourcesSearch;
     }
@@ -56,27 +46,23 @@ public class SearchVoucherServiceImpl implements SearchVoucherService {
             return Collections.emptyList();
         }
 
-        Function<Long, ResponseEntity<PagedResources<Voucher>>> api = nextPage -> getPagedResourcesResponseEntity(voucher, nextPage);
-
-        return pagedResource.search(api);
+        return pagedResource.search(voucherUri(voucher));
     }
 
-    private ResponseEntity<PagedResources<Voucher>> getPagedResourcesResponseEntity(Voucher voucher, Long nextPage) {
+    private Supplier<UriComponentsBuilder> voucherUri(Voucher voucher) {
+        return () -> create(voucher);
+    }
+
+    private UriComponentsBuilder create(Voucher voucher) {
         UriComponentsBuilder uriComponentsBuilder = UriComponentsBuilder.fromHttpUrl(uri).pathSegment(businessId, endpoint);
 
         searchVoucherQueryParameter.getQueryParams(voucher).ifPresent(uriComponentsBuilder::queryParams);
 
-        uriComponentsBuilder.queryParam("page", nextPage);
-
-        String url = uriComponentsBuilder.toUriString();
-        LOG.info("Call the API {}", url);
-        return restTemplate.exchange(url, HttpMethod.GET,null, new ParameterizedTypeReference<PagedResources<Voucher>>() {});
+        return  uriComponentsBuilder;
     }
 
     public List<Voucher> searchFallback(Voucher voucher) {
         LOG.warn("Calling searchFallback");
-        Voucher build = Voucher.builder().clientId("123").build();
-        Voucher build2 = Voucher.builder().clientId("54674576").build();
-        return Arrays.asList(build, build2);
+        return Collections.emptyList();
     }
 }
