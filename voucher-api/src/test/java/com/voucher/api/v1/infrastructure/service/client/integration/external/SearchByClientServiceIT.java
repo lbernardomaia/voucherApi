@@ -1,4 +1,4 @@
-package com.voucher.api.v1.infrastructure.service.client.integration;
+package com.voucher.api.v1.infrastructure.service.client.integration.external;
 
 import com.voucher.api.v1.core.model.Client;
 import com.voucher.api.v1.infrastructure.service.client.SearchByClientService;

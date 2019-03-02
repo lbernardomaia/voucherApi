@@ -30,7 +30,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 @RunWith(SpringRunner.class)
 @RestClientTest({ SearchByClientService.class, SearchByClientQueryParameter.class, PagedResourcesSearch.class })
 @ContextConfiguration(classes = {AppConfigTest.class})
-public class SearchByClientServiceItInMemory {
+public class SearchByClientServiceIt {
 
     @Autowired
     private SearchByClientService searchByClient;

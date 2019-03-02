@@ -1,4 +1,4 @@
-package com.voucher.api.v1.infrastructure.service.voucher.integration;
+package com.voucher.api.v1.infrastructure.service.voucher.integration.external;
 
 import com.voucher.api.v1.core.model.Voucher;
 import com.voucher.api.v1.infrastructure.service.voucher.SearchVoucherService;
