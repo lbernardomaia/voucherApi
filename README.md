@@ -21,14 +21,27 @@ The main stack is:
 
 ## Getting Started
 
-
 ```
 git clone https://github.com/lbernardomaia/voucherApi
 cd voucherApi
+```
+
+## Running the app with Docker
+ 
+```
+docker-compose up
+```
+```
+docker attach voucher-client
+```
+
+## Running the app
+
+```
 mvn clean package  
 ```
 
-## VoucherAPI
+-   VoucherAPI
 ```
 java -jar voucher-api/target/voucher-api-0.0.1-SNAPSHOT.jar 
 ```
@@ -36,11 +49,13 @@ The API is running on port 8080.
 
 E.g. http://localhost:8080/api/v1/client
 
-## Voucher Client
+-   Voucher Client
 ```
 java -jar voucher-client/target/voucher-api-client-0.0.1-SNAPSHOT.jar 
 ```
-## CLient CLI Commands
+
+
+## Interacting with the Client CLI
 
 The command ```help```  display a list of commands available
 
