@@ -26,17 +26,20 @@ git clone https://github.com/lbernardomaia/voucherApi
 cd voucherApi
 ```
 
-## Running the app with Docker
- 
+<details>
+  <summary><b>Running with Docker</b></summary> 
+
 ```
 docker-compose up
 ```
 ```
 docker attach voucher-client
 ```
+</details>
 
-## Running the app
-
+<details>
+  <summary><b>Running without Docker</b></summary>
+ 
 ```
 mvn clean package  
 ```
@@ -53,7 +56,7 @@ E.g. http://localhost:8080/api/v1/client
 ```
 java -jar voucher-client/target/voucher-api-client-0.0.1-SNAPSHOT.jar 
 ```
-
+</details>
 
 ## Interacting with the Client CLI
 
