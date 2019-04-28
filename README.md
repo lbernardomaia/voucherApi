@@ -4,7 +4,7 @@ This repository consists of two projects.
 
 - voucher-api - The project aims to communicate with a third party API.
 
-- voucher-client - The project is a CLI that interacts with the VoucherAPI in order to perform the operations.
+- voucher-client - The project is a CLI that interacts with the voucher-api in order to perform the operations.
 
 ![API Design](https://github.com/lbernardomaia/voucherApi/blob/master/api_design.jpg)
 
