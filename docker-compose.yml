@@ -4,16 +4,10 @@ services:
     build: ./voucher-api
     ports:
       - "8080:8080"
-    networks:
-      - api      
   voucher-client:
     container_name: voucher-client
     build: ./voucher-client
     depends_on:
       - voucher-api
-    networks:
-      - api
     stdin_open: true
     tty: true
-networks:
-   api:
