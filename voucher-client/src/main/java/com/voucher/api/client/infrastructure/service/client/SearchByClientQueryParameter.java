@@ -5,7 +5,7 @@ import org.springframework.util.MultiValueMap;
 
 import java.util.Optional;
 
-public interface SearchByClientQueryParameter {
+interface SearchByClientQueryParameter {
     String EMAIL = "email";
     String PHONE = "phone";
     String FIRST_NAME = "firstName";

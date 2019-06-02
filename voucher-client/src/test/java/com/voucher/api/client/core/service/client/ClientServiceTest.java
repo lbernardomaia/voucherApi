@@ -1,8 +1,9 @@
-package com.voucher.api.client.core.service;
+package com.voucher.api.client.core.service.client;
 
 import com.voucher.api.client.core.dto.ClientDto;
 import com.voucher.api.client.core.dto.SearchClientDto;
 import com.voucher.api.client.core.model.Client;
+import com.voucher.api.client.core.service.client.ClientService;
 import com.voucher.api.client.infrastructure.service.client.GetClientByIdService;
 import com.voucher.api.client.infrastructure.service.client.SearchClientService;
 import com.voucher.api.client.core.mapper.ClientMapper;
@@ -24,7 +25,7 @@ import static org.mockito.Mockito.when;
 public class ClientServiceTest {
 
     @InjectMocks
-    private ClientServiceImpl clientService;
+    private ClientService clientService;
 
     @Mock
     private GetClientByIdService getClientByIdService;

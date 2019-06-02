@@ -1,6 +1,7 @@
 package com.voucher.api.client.infrastructure.service.voucher;
 
 import com.voucher.api.client.core.model.Voucher;
+import com.voucher.api.client.core.service.voucher.SearchVoucherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;

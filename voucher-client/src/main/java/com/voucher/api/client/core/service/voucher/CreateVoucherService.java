@@ -1,4 +1,4 @@
-package com.voucher.api.client.infrastructure.service.voucher;
+package com.voucher.api.client.core.service.voucher;
 
 import com.voucher.api.client.core.model.Voucher;
 

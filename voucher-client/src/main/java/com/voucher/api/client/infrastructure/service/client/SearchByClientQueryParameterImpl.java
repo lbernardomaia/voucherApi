@@ -11,7 +11,7 @@ import static java.util.Optional.empty;
 import static java.util.Optional.of;
 
 @Service
-public class SearchByClientQueryParameterImpl implements SearchByClientQueryParameter {
+class SearchByClientQueryParameterImpl implements SearchByClientQueryParameter {
 
     @Override
     public Optional<MultiValueMap<String, String>> getQueryParams(Client client) {

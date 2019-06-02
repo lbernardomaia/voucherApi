@@ -1,10 +1,8 @@
-package com.voucher.api.client.core.service;
+package com.voucher.api.client.core.service.voucher;
 
 import com.voucher.api.client.core.dto.VoucherDto;
-import com.voucher.api.client.core.model.Voucher;
-import com.voucher.api.client.infrastructure.service.voucher.CreateVoucherService;
-import com.voucher.api.client.infrastructure.service.voucher.SearchVoucherService;
 import com.voucher.api.client.core.mapper.VoucherMapper;
+import com.voucher.api.client.core.model.Voucher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,15 +12,15 @@ import java.util.Collection;
 import java.util.List;
 
 @Service
-public class VoucherServiceImpl implements VoucherService {
-    private static Logger LOG = LoggerFactory.getLogger(VoucherServiceImpl.class);
+public class VoucherService {
+    private static Logger LOG = LoggerFactory.getLogger(VoucherService.class);
 
     private SearchVoucherService searchVoucherService;
     private CreateVoucherService createVoucherService;
     private VoucherMapper voucherMapper;
 
     @Autowired
-    public VoucherServiceImpl(SearchVoucherService searchVoucherService,
+    public VoucherService(SearchVoucherService searchVoucherService,
                               CreateVoucherService createVoucherService,
                               VoucherMapper voucherMapper) {
         this.searchVoucherService = searchVoucherService;
@@ -30,7 +28,6 @@ public class VoucherServiceImpl implements VoucherService {
         this.voucherMapper = voucherMapper;
     }
 
-    @Override
     public List<VoucherDto> search(String clientId, String serialNumber) {
         Voucher voucher = new Voucher();
         voucher.setClientId(clientId);
@@ -43,7 +40,6 @@ public class VoucherServiceImpl implements VoucherService {
         return voucherMapper.mapToDto(search);
     }
 
-    @Override
     public VoucherDto create(String clientId, Double balance) {
         LOG.info("Voucher to save clientId {} balance {}", clientId, balance);
 

@@ -2,3 +2,7 @@
 /voucher-api-client.iml
 /target/
 /.gitignore
+*.swm
+*.swn
+*.swo
+*.swp

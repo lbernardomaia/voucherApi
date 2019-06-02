@@ -1,9 +1,8 @@
-package com.voucher.api.client.core.service;
+package com.voucher.api.client.core.service.voucher;
 
 import com.voucher.api.client.core.dto.VoucherDto;
-import com.voucher.api.client.core.model.Voucher;
-import com.voucher.api.client.infrastructure.service.voucher.SearchVoucherService;
 import com.voucher.api.client.core.mapper.VoucherMapper;
+import com.voucher.api.client.core.model.Voucher;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +21,7 @@ import static org.mockito.Mockito.when;
 public class VoucherServiceTest {
 
     @InjectMocks
-    private VoucherServiceImpl voucherService;
+    private VoucherService voucherService;
 
     @Mock
     private SearchVoucherService searchVoucherService;

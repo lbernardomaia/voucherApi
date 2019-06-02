@@ -1,8 +1,8 @@
 package com.voucher.api.client.terminal.command;
 
-import com.voucher.api.client.terminal.transformer.Transformer;
 import com.voucher.api.client.core.dto.SearchClientDto;
-import com.voucher.api.client.core.service.ClientService;
+import com.voucher.api.client.core.service.client.ClientService;
+import com.voucher.api.client.terminal.transformer.Transformer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

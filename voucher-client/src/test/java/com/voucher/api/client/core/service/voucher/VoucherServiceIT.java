@@ -1,6 +1,7 @@
-package com.voucher.api.client.core.service;
+package com.voucher.api.client.core.service.voucher;
 
 import com.voucher.api.client.core.dto.VoucherDto;
+import com.voucher.api.client.core.service.voucher.VoucherService;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;

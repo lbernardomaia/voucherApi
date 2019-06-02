@@ -1,4 +1,4 @@
-package com.voucher.api.client.core.service;
+package com.voucher.api.client.core.service.client;
 
 import com.voucher.api.client.core.dto.ClientDto;
 import com.voucher.api.client.core.dto.SearchClientDto;
@@ -15,16 +15,16 @@ import java.util.Collection;
 import java.util.List;
 
 @Service
-public class ClientServiceImpl implements ClientService{
+public class ClientService{
 
-    private static Logger LOG = LoggerFactory.getLogger(ClientServiceImpl.class);
+    private static Logger LOG = LoggerFactory.getLogger(ClientService.class);
 
     private GetClientByIdService getClientByIdService;
     private SearchClientService searchByClientService;
     private ClientMapper clientMapper;
 
     @Autowired
-    public ClientServiceImpl(GetClientByIdService getClientByIdService,
+    public ClientService(GetClientByIdService getClientByIdService,
                              SearchClientService searchByClientService,
                              ClientMapper clientMapper) {
         this.getClientByIdService = getClientByIdService;
@@ -32,7 +32,6 @@ public class ClientServiceImpl implements ClientService{
         this.clientMapper = clientMapper;
     }
 
-    @Override
     public ClientDto getClientById(String clientId) {
         Client client = getClientByIdService.search(clientId);
         LOG.info("Client {}", client);
@@ -40,7 +39,6 @@ public class ClientServiceImpl implements ClientService{
         return clientMapper.mapToDto(client);
     }
 
-    @Override
     public List<ClientDto> searchBy(SearchClientDto searchClientDto) {
         Client client = clientMapper.mapToModel(searchClientDto);
 

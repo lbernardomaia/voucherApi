@@ -1,3 +1,7 @@
 /.idea/
 /voucher-api-client.iml
 /target/
+*.swm
+*.swn
+*.swo
+*.swp

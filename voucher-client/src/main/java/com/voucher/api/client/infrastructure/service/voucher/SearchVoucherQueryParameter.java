@@ -5,7 +5,7 @@ import org.springframework.util.MultiValueMap;
 
 import java.util.Optional;
 
-public interface SearchVoucherQueryParameter {
+interface SearchVoucherQueryParameter {
     String CLIENT_ID = "clientId";
     String SERIAL_NUMBER = "serialNumber";
 

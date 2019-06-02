@@ -11,7 +11,7 @@ import static java.util.Optional.empty;
 import static java.util.Optional.of;
 
 @Service
-public class SearchVoucherQueryParameterImpl implements SearchVoucherQueryParameter {
+class SearchVoucherQueryParameterImpl implements SearchVoucherQueryParameter {
     @Override
     public Optional<MultiValueMap<String, String>> getQueryParams(Voucher voucher) {
 

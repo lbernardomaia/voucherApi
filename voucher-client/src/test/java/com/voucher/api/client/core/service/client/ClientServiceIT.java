@@ -1,7 +1,8 @@
-package com.voucher.api.client.core.service;
+package com.voucher.api.client.core.service.client;
 
 import com.voucher.api.client.core.dto.ClientDto;
 import com.voucher.api.client.core.dto.SearchClientDto;
+import com.voucher.api.client.core.service.client.ClientService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
