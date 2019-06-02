@@ -2,6 +2,7 @@ package com.voucher.api.v1.infrastructure.service.voucher;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.voucher.api.v1.core.model.Voucher;
+import com.voucher.api.v1.core.service.voucher.SearchVoucherService;
 import com.voucher.api.v1.infrastructure.service.PagedResourcesSearch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

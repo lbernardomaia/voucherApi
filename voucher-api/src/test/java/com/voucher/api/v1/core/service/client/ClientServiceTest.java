@@ -1,11 +1,9 @@
-package com.voucher.api.v1.core.service;
+package com.voucher.api.v1.core.service.client;
 
 import com.voucher.api.v1.core.dto.client.ClientDto;
 import com.voucher.api.v1.core.dto.client.SearchClientDto;
 import com.voucher.api.v1.core.mapper.ClientMapper;
 import com.voucher.api.v1.core.model.Client;
-import com.voucher.api.v1.infrastructure.service.client.GetClientByIdService;
-import com.voucher.api.v1.infrastructure.service.client.SearchByClientService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,7 +30,7 @@ public class ClientServiceTest {
         searchByClientService = mock(SearchByClientService.class);
         ClientMapper clientMapper = ClientMapper.INSTANCE;
 
-        clientService = new ClientServiceImpl(getClientByIdService, searchByClientService, clientMapper);
+        clientService = new ClientService(getClientByIdService, searchByClientService, clientMapper);
     }
 
     @Test

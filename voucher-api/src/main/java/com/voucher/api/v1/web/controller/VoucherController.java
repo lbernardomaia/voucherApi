@@ -3,7 +3,7 @@ package com.voucher.api.v1.web.controller;
 import com.voucher.api.v1.core.dto.voucher.CreateVoucherDto;
 import com.voucher.api.v1.core.dto.voucher.SearchVoucherDto;
 import com.voucher.api.v1.core.dto.voucher.VoucherDto;
-import com.voucher.api.v1.core.service.VoucherService;
+import com.voucher.api.v1.core.service.voucher.VoucherService;
 import com.voucher.api.v1.web.validator.voucher.VoucherBalanceValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

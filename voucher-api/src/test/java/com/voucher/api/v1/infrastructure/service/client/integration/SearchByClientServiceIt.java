@@ -4,7 +4,7 @@ import com.voucher.api.v1.AppConfigTest;
 import com.voucher.api.v1.core.model.Client;
 import com.voucher.api.v1.infrastructure.service.PagedResourcesSearch;
 import com.voucher.api.v1.infrastructure.service.client.SearchByClientQueryParameter;
-import com.voucher.api.v1.infrastructure.service.client.SearchByClientService;
+import com.voucher.api.v1.core.service.client.SearchByClientService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

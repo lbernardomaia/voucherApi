@@ -1,12 +1,10 @@
-package com.voucher.api.v1.core.service;
+package com.voucher.api.v1.core.service.voucher;
 
 import com.voucher.api.v1.core.dto.voucher.CreateVoucherDto;
 import com.voucher.api.v1.core.dto.voucher.SearchVoucherDto;
 import com.voucher.api.v1.core.dto.voucher.VoucherDto;
 import com.voucher.api.v1.core.mapper.VoucherMapper;
 import com.voucher.api.v1.core.model.Voucher;
-import com.voucher.api.v1.infrastructure.service.voucher.CreateVoucherService;
-import com.voucher.api.v1.infrastructure.service.voucher.SearchVoucherService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,7 +31,7 @@ public class VoucherServiceTest {
         createVoucherService = mock(CreateVoucherService.class);
         VoucherMapper voucherMapper = VoucherMapper.INSTANCE;
 
-        voucherService = new VoucherServiceImpl(searchVoucherService, createVoucherService, voucherMapper, branchId, voucherId);
+        voucherService = new VoucherService(searchVoucherService, createVoucherService, voucherMapper, branchId, voucherId);
     }
 
     @Test

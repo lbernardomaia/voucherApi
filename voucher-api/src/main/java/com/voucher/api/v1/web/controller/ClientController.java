@@ -1,6 +1,6 @@
 package com.voucher.api.v1.web.controller;
 
-import com.voucher.api.v1.core.service.ClientService;
+import com.voucher.api.v1.core.service.client.ClientService;
 import com.voucher.api.v1.core.dto.client.ClientDto;
 import com.voucher.api.v1.core.dto.client.SearchClientDto;
 import com.voucher.api.v1.web.validator.client.SearchNotEmptyValidator;

@@ -7,8 +7,7 @@
 	<groupId>bernardomaia.voucher-api</groupId>
 	<artifactId>voucher-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Voucher API - Parent</name>
-	<description>Voucher API</description>
+	<name>Voucher API</name>
 	<packaging>jar</packaging>
 
 	<parent>

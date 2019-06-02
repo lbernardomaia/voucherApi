@@ -1,7 +1,7 @@
 package com.voucher.api.v1.infrastructure.service.voucher.integration.external;
 
 import com.voucher.api.v1.core.model.Voucher;
-import com.voucher.api.v1.infrastructure.service.voucher.SearchVoucherService;
+import com.voucher.api.v1.core.service.voucher.SearchVoucherService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
